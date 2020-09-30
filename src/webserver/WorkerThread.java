@@ -64,6 +64,15 @@ public class WorkerThread implements Runnable{
         
 	}
 	
+	/**
+     * Reading file content and returning bytes array.
+     * 
+     * @param file
+     *            the file to read
+     * @param fileLength
+     *            the length of file content
+     * @return the byte array
+     */
 	private byte[] readFileData(File file, int fileLength) throws IOException {
 		FileInputStream fileIStream = null;
 		byte[] fileData = new byte[fileLength];

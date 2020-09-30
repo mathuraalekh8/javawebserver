@@ -57,6 +57,10 @@ public class StartWebServer implements Runnable{
 		
 	}
 	
+	/**
+     * Changing the server start flag to stop
+     * server accepting the incoming requests.
+     */
 	public synchronized void stop(){
         this.serverStartedFlag = false;
         try {
