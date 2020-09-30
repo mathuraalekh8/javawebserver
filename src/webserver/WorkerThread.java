@@ -36,14 +36,14 @@ public class WorkerThread implements Runnable{
 			 File file = new File(ROOT_PATH, INDEX_FILE);
 			 int fileLength = (int) file.length();
 			 byte[] fileData = readFileData(file, fileLength);
-			 
+			 /***********This piece of code was copied to see how the response is sent back to client*************/
 			 out.println("HTTP/1.1 200 OK");
 			 out.println("Server: Java HTTP Server by Aalekh : 1.0");
 			 out.println("Date: " + new Date());
 			 out.println("Content-type:text/html ");
 			 out.println("Content-length: " + fileLength);
 			 out.flush();
-			 
+			 /***********This piece of code was copied to see how the response is sent back to client*************/
 			 dataOut.write(fileData, 0, fileLength);
 			 dataOut.flush();
 			 
